@@ -1,0 +1,488 @@
+{
+  "triggers": {
+    "i feel low": {
+      "emotion": "sad",
+      "response": "I'm sorry you're feeling low. Would you like to talk about it or try a short breathing exercise?",
+      "followup": ["yes", "no", "breathing exercise"]
+    },
+    "i am sad": {
+      "emotion": "sad",
+      "response": "It's okay to feel sad sometimes. Would you like some suggestions to feel better or share what's making you sad?",
+      "followup": ["suggestions", "share", "no"]
+    },
+    "i am stressed": {
+      "emotion": "stressed",
+      "response": "Stress is tough. Would you like some tips to manage stress or a calming audio?",
+      "followup": ["tips", "audio", "no"]
+    },
+    "i am anxious": {
+      "emotion": "anxious",
+      "response": "Anxiety can feel overwhelming. Do you want grounding techniques or to talk to someone?",
+      "followup": ["grounding techniques", "talk", "no"]
+    },
+    "i am angry": {
+      "emotion": "angry",
+      "response": "Anger is a valid emotion. Would you like to vent, try a calming exercise, or get advice?",
+      "followup": ["vent", "calming exercise", "advice", "no"]
+    },
+    "i am bored": {
+      "emotion": "bored",
+      "response": "Boredom strikes us all! Want activity suggestions, a random fact, or a joke?",
+      "followup": ["activity", "fact", "joke", "no"]
+    },
+    "i am happy": {
+      "emotion": "happy",
+      "response": "That's wonderful! Want to share what's making you happy or spread positivity?",
+      "followup": ["share", "positivity", "no"]
+    },
+    "i am grateful": {
+      "emotion": "grateful",
+      "response": "Gratitude is powerful! Want to note your gratitude or send thanks to someone?",
+      "followup": ["note", "send thanks", "no"]
+    },
+    "i feel excited": {
+      "emotion": "excited",
+      "response": "Excitement is contagious! Would you like to share your news or celebrate?",
+      "followup": ["share", "celebrate", "no"]
+    },
+    "i can't sleep": {
+      "emotion": "tired",
+      "response": "Sleep troubles are common. Would you like sleep tips, a relaxation exercise, or soothing sounds?",
+      "followup": ["tips", "relaxation", "sounds", "no"]
+    },
+    "i need motivation": {
+      "emotion": "unmotivated",
+      "response": "We all need a boost sometimes. Want a motivational quote, productivity tip, or a pep talk?",
+      "followup": ["quote", "tip", "pep talk", "no"]
+    },
+    "i want to meditate": {
+      "emotion": "focused",
+      "response": "Meditation is a great choice. Would you like a guided meditation, timer, or tips?",
+      "followup": ["guided", "timer", "tips", "no"]
+    },
+    "i want to vent": {
+      "emotion": "frustrated",
+      "response": "You can vent here. I'm listening. When you're ready, want feedback or just a listening ear?",
+      "followup": ["feedback", "just listen", "no"]
+    },
+    "i want to be heard": {
+      "emotion": "unheard",
+      "response": "I'm here to listen. Please share what's on your mind.",
+      "followup": []
+    },
+    "i need help": {
+      "emotion": "neutral",
+      "response": "I'm here to help! Is it emotional support, practical advice, or something else?",
+      "followup": ["emotional support", "practical advice", "something else"]
+    },
+    "i feel lost": {
+      "emotion": "confused",
+      "response": "Feeling lost is tough. Would you like to talk it out, get advice, or hear a positive story?",
+      "followup": ["talk", "advice", "story", "no"]
+    },
+    "i am overwhelmed": {
+      "emotion": "overwhelmed",
+      "response": "Overwhelm can be paralyzing. Want to break tasks down, try a calming technique, or just chat?",
+      "followup": ["break down tasks", "calming technique", "chat", "no"]
+    },
+    "i want to give up": {
+      "emotion": "hopeless",
+      "response": "I'm really sorry you're feeling this way. Would you like to talk to a friend or see some resources?",
+      "followup": ["talk to friend", "resources", "no"]
+    },
+    "i feel hopeless": {
+      "emotion": "hopeless",
+      "response": "Hopelessness can be very heavy. Would you like to talk, try a grounding technique, or see professional support resources?",
+      "followup": ["talk", "grounding", "professional support", "no"]
+    },
+    "i'm worried": {
+      "emotion": "worried",
+      "response": "Worry is natural. Want to discuss your worries, try a relaxation exercise, or get distraction tips?",
+      "followup": ["discuss", "relaxation", "distraction tips", "no"]
+    },
+    "i feel energetic": {
+      "emotion": "energetic",
+      "response": "Great energy! Want to channel it into a quick workout, creative task, or fun game?",
+      "followup": ["workout", "creative task", "game", "no"]
+    },
+    "i feel creative": {
+      "emotion": "creative",
+      "response": "Creativity is amazing! Want a creative prompt, share your ideas, or explore something new?",
+      "followup": ["prompt", "share ideas", "explore", "no"]
+    },
+    "i am hungry": {
+      "emotion": "neutral",
+      "response": "Hungry? Want snack ideas, a recipe, or food delivery suggestions?",
+      "followup": ["snack ideas", "recipe", "delivery", "no"]
+    },
+    "i am sick": {
+      "emotion": "unwell",
+      "response": "I'm sorry you're not feeling well. Do you want home remedies, when to see a doctor, or just some comfort?",
+      "followup": ["remedies", "doctor", "comfort", "no"]
+    },
+    "i'm in pain": {
+      "emotion": "pain",
+      "response": "Pain isn't easy. Would you like pain management tips, distraction ideas, or medical info?",
+      "followup": ["pain tips", "distraction", "medical info", "no"]
+    },
+    "i am nervous": {
+      "emotion": "nervous",
+      "response": "Nerves can be tough. Want calming techniques, confidence boosters, or to talk about it?",
+      "followup": ["calming", "boosters", "talk", "no"]
+    },
+    "i feel insecure": {
+      "emotion": "insecure",
+      "response": "Everyone feels insecure sometimes. Would you like affirmations, self-esteem tips, or to share your thoughts?",
+      "followup": ["affirmations", "self-esteem tips", "share", "no"]
+    },
+    "i am proud": {
+      "emotion": "proud",
+      "response": "That's awesome! Want to celebrate, share your achievement, or inspire others?",
+      "followup": ["celebrate", "share", "inspire", "no"]
+    },
+    "i am confused": {
+      "emotion": "confused",
+      "response": "Confusion is a step to clarity. Want help understanding, get advice, or hear a story?",
+      "followup": ["help", "advice", "story", "no"]
+    },
+    "thank you": {
+      "emotion": "grateful",
+      "response": "You're welcome! Let me know if you need anything else.",
+      "followup": []
+    },
+    "hello": {
+      "emotion": "neutral",
+      "response": "Hi there! How are you feeling today?",
+      "followup": []
+    },
+    "goodbye": {
+      "emotion": "neutral",
+      "response": "Take care! I'll be here whenever you want to chat.",
+      "followup": []
+    },
+    "help": {
+      "emotion": "neutral",
+      "response": "You can tell me how you're feeling, or ask for a tip, a joke, or support.",
+      "followup": []
+    },
+    "i feel anxious": {
+      "emotion": "anxious",
+      "response": "Anxiety can be tough. Would you like to try a grounding technique or talk about it?",
+      "followup": ["grounding", "talk", "no"]
+    },
+    "i feel angry": {
+      "emotion": "angry",
+      "response": "Anger is a valid emotion. Do you want to vent, try a calming exercise, or get advice?",
+      "followup": ["vent", "calming exercise", "advice", "no"]
+    },
+    "i feel lonely": {
+      "emotion": "lonely",
+      "response": "Loneliness can be hard. Would you like to connect with others online or try a distraction?",
+      "followup": ["connect", "distraction", "no"]
+    },
+    "i feel sad": {
+      "emotion": "sad",
+      "response": "I'm sorry you're feeling sad. Want to talk, hear a joke, or try a mood-lifting activity?",
+      "followup": ["talk", "joke", "activity"]
+    },
+    "i'm feeling blue": {
+      "emotion": "sad",
+      "response": "Blue days happen. Want to share what's on your mind or get a fun fact?",
+      "followup": ["share", "fun fact", "activity"]
+    },
+    "i'm down": {
+      "emotion": "sad",
+      "response": "Do you want a positive quote or to talk about it?",
+      "followup": ["quote", "talk"]
+    },
+    "i feel embarrassed": {
+      "emotion": "embarrassed",
+      "response": "Embarrassment is tough. Want to talk about it or hear an uplifting story?",
+      "followup": ["talk", "story", "no"]
+    },
+    "i feel nostalgic": {
+      "emotion": "nostalgic",
+      "response": "Nostalgia can be bittersweet. Want to share a memory or try a creative prompt?",
+      "followup": ["share memory", "creative prompt", "no"]
+    },
+    "i'm motivated": {
+      "emotion": "motivated",
+      "response": "That's great! Want a productivity tip or to set a goal?",
+      "followup": ["tip", "set goal", "no"]
+    },
+    "i'm inspired": {
+      "emotion": "inspired",
+      "response": "Awesome! Would you like to start a creative activity or share your inspiration?",
+      "followup": ["creative activity", "share", "no"]
+    },
+    "i feel jealous": {
+      "emotion": "jealous",
+      "response": "Jealousy is normal. Would you like advice or just to talk about it?",
+      "followup": ["advice", "talk"]
+    },
+    "i feel rejected": {
+      "emotion": "rejected",
+      "response": "Rejection hurts. Want some encouragement or tips to cope?",
+      "followup": ["encouragement", "coping tips", "no"]
+    },
+    "i feel burnt out": {
+      "emotion": "burnt out",
+      "response": "Burnout is serious. Want a self-care suggestion or to take a quick break together?",
+      "followup": ["self-care", "quick break", "no"]
+    },
+    "i feel peaceful": {
+      "emotion": "peaceful",
+      "response": "That's wonderful! Would you like to do a gratitude exercise or share your thoughts?",
+      "followup": ["gratitude exercise", "share", "no"]
+    },
+    "i feel content": {
+      "emotion": "content",
+      "response": "Glad to hear you're content. Want to celebrate, share what made your day, or help someone else feel good?",
+      "followup": ["celebrate", "share", "help others"]
+    },
+    "i feel surprised": {
+      "emotion": "surprised",
+      "response": "Surprises can be fun! Want to tell me what surprised you or get a random fun fact?",
+      "followup": ["share", "fun fact"]
+    },
+    "i feel energetic": {
+      "emotion": "energetic",
+      "response": "Great energy! Want a workout, dance song, or a quick game?",
+      "followup": ["workout", "dance song", "game"]
+    },
+    "i feel exhausted": {
+      "emotion": "tired",
+      "response": "Exhaustion is tough. Want to try a relaxation exercise or get some rest advice?",
+      "followup": ["relaxation", "rest advice"]
+    },
+    "i feel hopeless": {
+      "emotion": "hopeless",
+      "response": "I'm really sorry you're feeling this way. Want to talk, see support resources, or try grounding techniques?",
+      "followup": ["talk", "resources", "grounding"]
+    },
+    "i'm worried about my exams": {
+      "emotion": "worried",
+      "response": "Exam stress is common. Want study tips, relaxation, or just to vent?",
+      "followup": ["study tip", "relaxation", "vent"]
+    },
+    "i just broke up": {
+      "emotion": "sad",
+      "response": "Breakups are hard. Want to talk, get comfort, or hear a hopeful story?",
+      "followup": ["talk", "comfort", "story"]
+    },
+    "i want to celebrate": {
+      "emotion": "excited",
+      "response": "Let's celebrate! Want a virtual high five, a joke, or to share your news?",
+      "followup": ["high five", "joke", "share"]
+    },
+    "i'm grateful for my friends": {
+      "emotion": "grateful",
+      "response": "That's lovely! Want to send them a thank you message or note your gratitude?",
+      "followup": ["send thanks", "note gratitude"]
+    },
+    "i want a trivia question": {
+      "emotion": "curious",
+      "response": "Here's a trivia question: What is the capital city of Canada?",
+      "followup": ["answer", "another question", "no"]
+    },
+    "i want to learn": {
+      "emotion": "curious",
+      "response": "Would you like a random fact, a new word, or a study tip?",
+      "followup": ["fact", "word", "study tip", "no"]
+    },
+    "surprise me": {
+      "emotion": "surprised",
+      "response": "Did you know? Octopuses have three hearts!",
+      "followup": ["another surprise", "no"]
+    },
+    "i need a productivity tip": {
+      "emotion": "motivated",
+      "response": "Here's a tip: Use the Pomodoro technique—work for 25 minutes, then take a 5-minute break!",
+      "followup": ["more tips", "no"]
+    },
+    "i feel happy": {
+      "emotion": "happy",
+      "response": "That's great! Want to share your happiness or spread some positivity?",
+      "followup": ["share", "spread positivity"]
+    },
+    "hi": {
+      "emotion": "neutral",
+      "response": "Hello! How are you feeling today?",
+      "followup": []
+    }
+  },
+  "followups": {
+    "yes": "Please tell me more.",
+    "no": "No problem! I'm here if you need me.",
+    "breathing exercise": "Let's do a short breathing exercise: inhale for 4 seconds, hold for 7, exhale for 8. Repeat a few times.",
+    "suggestions": "Try going for a walk, listening to music, or writing your thoughts down.",
+    "tips": "Take a deep breath and break your tasks into smaller steps.",
+    "audio": "Here's a calming audio: [link to audio]",
+    "grounding techniques": "Try the 5-4-3-2-1 method: Name 5 things you see, 4 you feel, 3 you hear, 2 you smell, 1 you taste.",
+    "calming exercise": "Try closing your eyes and taking slow, deep breaths for one minute.",
+    "community": "Check out online forums or groups with shared interests. Would you like some links?",
+    "positivity": "Share a positive message with someone today!",
+    "note": "Write down three things you’re grateful for today.",
+    "sounds": "Here's a playlist of soothing sounds: [link to playlist]",
+    "tip": "Set a small, achievable goal for today.",
+    "pep talk": "You’ve overcome so much already—believe in yourself!",
+    "guided": "Here’s a 5-minute guided meditation: [link]",
+    "timer": "Set a timer for your meditation—would you like 5, 10, or 15 minutes?",
+    "feedback": "Would you like constructive feedback, or should I just listen?",
+    "just listen": "I'm here for you. Please share whatever's on your mind.",
+    "emotional support": "I'm here to listen and support you emotionally.",
+    "practical advice": "Tell me your situation, and I’ll try to give practical advice.",
+    "something else": "Please describe what you need help with.",
+    "story": "Here’s a positive story: A young woman once struggled with self-doubt and setbacks in her career. Instead of giving up, she decided to learn something new every day and celebrate small wins. Over time, her confidence grew, and she landed her dream job. Her journey reminds us that persistence and self-belief can turn challenges into opportunities.",
+    "break down tasks": "List your tasks and let’s break them into smaller steps.",
+    "calming technique": "Try box breathing: inhale for 4, hold for 4, exhale for 4, hold for 4.",
+    "chat": "Let’s just chat! What’s on your mind?",
+    "talk to friend": "Reach out to a friend or loved one—connection helps.",
+    "professional support": "Would you like to see a list of hotlines or therapy resources?",
+    "discuss": "Let’s talk through your worries.",
+    "distraction tips": "Try a puzzle, watch a short video, or call a friend.",
+    "creative task": "How about drawing, writing, or playing music?",
+    "prompt": "Write a story about a journey to an unknown land.",
+    "share ideas": "I'm all ears—what creative idea do you have?",
+    "explore": "Let’s discover a new hobby or topic together.",
+    "snack ideas": "How about fruit, nuts, or yogurt?",
+    "recipe": "Would you like a simple recipe suggestion?",
+    "delivery": "Here are popular food delivery apps in your area.",
+    "remedies": "Drink plenty of fluids and rest. Would you like more tips?",
+    "doctor": "If your symptoms persist, consider contacting a healthcare professional.",
+    "comfort": "Sending you a virtual hug.",
+    "pain tips": "Try gentle stretching, rest, and hydration.",
+    "distraction": "Try watching a funny video or reading something light.",
+    "medical info": "Would you like reliable medical info from trusted sources?",
+    "calming": "Take a few deep breaths and remember, this feeling will pass.",
+    "boosters": "Repeat to yourself: I am capable, I am strong.",
+    "affirmations": "You are enough. You are worthy. You are loved.",
+    "self-esteem tips": "Focus on your strengths and celebrate small wins.",
+    "inspire": "Share your journey to inspire others!",
+    "help": "What are you confused about? Let’s work through it together.",
+    "talk": "I'm here to listen. Please share more.",
+    "joke": "Why don’t scientists trust atoms? Because they make up everything!",
+    "activity": "Would you like to try a breathing exercise, a creative prompt, or a trivia game?",
+    "share": "Tell me more about it—I'm listening!",
+    "fun fact": "Bananas are berries, but strawberries aren't!",
+    "quote": "“Keep your face always toward the sunshine—and shadows will fall behind you.” – Walt Whitman",
+    "story": "Here's an uplifting story: A person once failed 100 times before succeeding—perseverance pays off!",
+    "creative prompt": "Write a short poem about your favorite memory.",
+    "tip": "Break big tasks into small steps. Progress is progress!",
+    "set goal": "What small goal would you like to set today?",
+    "creative activity": "Try drawing something from your window or inventing a story.",
+    "advice": "It's okay to feel jealous—focus on your strengths and what you can control.",
+    "encouragement": "You are valued and stronger than you think!",
+    "coping tips": "Try deep breathing or talking to a trusted friend.",
+    "self-care": "Drink some water, stretch, or take a 5-minute break.",
+    "quick break": "Stand up, stretch, and take three deep breaths.",
+    "gratitude exercise": "List 3 things you're grateful for today.",
+    "celebrate": "Congratulations! Every achievement is worth celebrating!",
+    "help others": "You can help others by sharing a kind word or doing a small favor.",
+    "workout": "Do 10 jumping jacks or a quick dance to your favorite song!",
+    "dance song": "Here's a song: 'Happy' by Pharrell Williams.",
+    "game": "Let's play: I spy with my little eye, something that is... blue!",
+    "relaxation": "Try this: Inhale for 4 seconds, hold for 7, exhale for 8.",
+    "rest advice": "Try to take a short nap or close your eyes for 10 minutes.",
+    "resources": "If you need help, consider reaching out to a mental health professional or a trusted person.",
+    "grounding": "Name 5 things you can see, 4 you can touch, 3 you can hear, 2 you can smell, 1 you can taste.",
+    "study tip": "Review your notes in small chunks and take regular breaks.",
+    "vent": "Let it out—I'm listening and not judging.",
+    "comfort": "Sending you a virtual hug 🤗",
+    "high five": "✋ High five!",
+    "send thanks": "You could send them a quick message or call to say thank you.",
+    "note gratitude": "Write down why you're grateful—it helps reinforce positive feelings.",
+    "answer": "The capital of Canada is Ottawa!",
+    "another question": "Here's another: What planet is known as the Red Planet?",
+    "fact": "A group of flamingos is called a 'flamboyance'!",
+    "word": "Today's word: 'Serendipity'—the occurrence of pleasant surprises.",
+    "study tip": "Eliminate distractions and set a timer for focused study.",
+    "another surprise": "Did you know? The Eiffel Tower can be 15 cm taller during hot days.",
+    "more tips": "Try batching similar tasks to save time.",
+    "spread positivity": "Share a compliment with someone today!"
+  },
+  "activities": {
+    "breathing exercise": "Let's try box breathing: Inhale for 4 seconds, hold for 4, exhale for 4, hold for 4.",
+    "creative prompt": "Draw your mood as a doodle or write a two-line story.",
+    "trivia game": "What is the largest ocean on Earth?",
+    "mood journaling": "Write down one thing that made you smile today.",
+    "mini workout": "Stand up and stretch your arms above your head for 10 seconds.",
+    "gratitude practice": "List three things, big or small, that you're grateful for right now.",
+    "music suggestion": "Listen to 'Here Comes the Sun' by The Beatles for a mood lift.",
+    "guided meditation": "Close your eyes, take a deep breath, and visualize a peaceful place for 5 minutes."
+  },
+  "knowledge_base": {
+    "facts": [
+      "Octopuses have three hearts.",
+      "Bananas are berries, but strawberries are not.",
+      "Honey never spoils.",
+      "A group of flamingos is called a 'flamboyance'.",
+      "The Eiffel Tower can be 15 cm taller during hot days.",
+      "A day on Venus is longer than a year on Venus.",
+      "Wombat poop is cube-shaped.",
+      "A jiffy is an actual unit of time: 1/100th of a second.",
+      "The shortest war in history lasted 38 minutes between Britain and Zanzibar in 1896.",
+      "A snail can sleep for three years.",
+      "The world's largest desert is Antarctica.",
+      "A bolt of lightning contains enough energy to toast 100,000 slices of bread.",
+      "A flock of crows is called"
+    ],
+    "quotes": [
+      "“The best way out is always through.” – Robert Frost",
+      "“Happiness can be found, even in the darkest of times, if one only remembers to turn on the light.” – J.K. Rowling",
+      "“You miss 100% of the shots you don’t take.” – Wayne Gretzky",
+      "“Believe you can and you're halfway there.” – Theodore Roosevelt",
+      "“The only limit to our realization of tomorrow will be our doubts of today.” – Franklin D. Roosevelt",
+      "“Act as if what you do makes a difference. It does.” – William James",
+      "“Success is not final, failure is not fatal: It is the courage to continue that counts.” – Winston Churchill",
+      "“In the middle of every difficulty lies opportunity.” – Albert Einstein",
+      "“The future belongs to those who believe in the beauty of their dreams.” – Eleanor Roosevelt"
+    ],
+    "definitions": {
+      "nostalgic": "A feeling of pleasure and slight sadness when thinking about things from the past.",
+      "burnt out": "The state of being physically and emotionally exhausted due to prolonged stress.",
+      "serendipity": "The occurrence of events by chance in a happy or beneficial way.",
+      "pomodoro technique": "A time management method that uses a timer to break work into intervals, traditionally 25 minutes in length, separated by short breaks.",
+      "grounding technique": "A mental exercise that helps you detach from emotional pain by focusing on the present moment.",
+      "self-care": "Activities and practices that we engage in on a regular basis to reduce stress and enhance our well-being.",
+      "mindfulness": "The quality of being present and fully engaged with the current moment, without judgment.",
+      "affirmation": "A positive statement that can help you to challenge and control negative thoughts or beliefs.",
+      "gratitude": "The quality of being thankful; readiness to show appreciation for and to return kindness.",
+      "empathy": "The ability to understand and share the feelings of another person.",
+      "self-esteem": "Confidence in one's own worth or abilities; self-respect.",
+      "motivation": "The reason or reasons one has for acting or behaving in a particular way.",
+      "anxiety": "A feeling of worry, nervousness, or unease about something with an uncertain outcome.",
+      "depression": "A mood disorder that causes a persistent feeling of sadness and loss of interest.",
+      "stress": "A state of mental or emotional strain or tension resulting from adverse or demanding circumstances.",
+      "mindfulness meditation": "A form of meditation that involves focusing on the present moment and accepting it without judgment.",
+      "cognitive behavioral therapy": "A type of psychotherapy that helps people understand the thoughts and feelings that influence behaviors.",
+      "self-compassion": "Being kind and understanding toward oneself in instances of pain or failure rather than being harshly self-critical.",
+      "emotional intelligence": "The ability to recognize, understand, and manage our own emotions while also recognizing, understanding, and influencing the emotions of others.",
+      "self-awareness": "The conscious knowledge of one's own character, feelings, motives, and desires.",
+      "resilience": "The capacity to recover quickly from difficulties; toughness.",
+      "mindful breathing": "A practice of focusing on the breath to bring attention to the present moment and reduce stress.",
+      "self-reflection": "The process of introspection and examining one's own thoughts, feelings, and motivations.",
+      "self-acceptance": "Recognizing and accepting one's own worth and individuality, including strengths and weaknesses.",
+      "self-improvement": "The improvement of one's knowledge, status, or character by one's own efforts.",
+      "self-discipline": "The ability to control one's feelings and overcome one's weaknesses; the ability to pursue what one thinks is right despite temptations to abandon it.",
+      "self-care routine": "A set of practices that individuals engage in to maintain and improve their physical, mental, and emotional health.",
+      "self-help": "The use of one's own efforts and resources to achieve things without relying on others.",
+      "self-empowerment": "The process of gaining freedom and power to do what you want or to control what happens to you.",
+      "self-awareness exercises": "Activities designed to help individuals gain a deeper understanding of their thoughts, emotions, and behaviors.",
+      "self-affirmation": "The practice of positive self-talk to reinforce one's self-worth and capabilities.",
+      "self-regulation": "The ability to manage one's emotions, thoughts, and behaviors in different situations.",
+      "self-motivation": "The ability to motivate oneself to take action and achieve goals without external encouragement.",
+      "self-actualization": "The realization or fulfillment of one's talents and potential, often considered as a drive or need present in everyone.",
+      "self-care activities": "Activities that individuals engage in to promote their own physical, mental, and emotional well-being, such as exercise, meditation, or hobbies.",
+      "self-awareness techniques": "Methods used to increase one's understanding of their own thoughts, emotions, and behaviors, such as journaling or mindfulness practices.",
+      "self-compassion exercises": "Activities designed to cultivate kindness and understanding towards oneself, especially in times of difficulty or failure.",
+      "self-esteem building": "Practices aimed at improving one's self-worth and confidence, such as positive affirmations or setting achievable goals.",
+      "self-care tips": "Suggestions for maintaining and improving one's well-being, such as getting enough sleep, eating healthy, and engaging in enjoyable activities."
+    }
+  },
+  "default": {
+    "emotion": "neutral",
+    "response": "I'm not sure I understand. Can you rephrase or tell me how you're feeling?",
+    "followup": []
+  }
+}

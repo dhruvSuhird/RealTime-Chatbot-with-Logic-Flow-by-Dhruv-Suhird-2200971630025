@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emotion Chatbot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="chat-container position-relative shadow">
+    <button class="btn btn-outline-secondary btn-sm theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+        <span id="theme-icon">🌗</span>
+    </button>
+    <div class="p-3 pb-0 text-center">
+        <h3 class="fw-bold mb-0">Emotion Chatbot</h3>
+        <div class="mb-1 subtitle" style="font-size:0.94em;">Share your feelings, get support 🤗</div>
+    </div>
+    <div id="chat-box"></div>
+    <div id="typing-indicator" class="typing-indicator" style="display:none;">Bot is typing...</div>
+    <form id="chat-form" class="input-group p-3 pt-2 border-0" autocomplete="off" spellcheck="false">
+        <input type="text" id="user-input" class="form-control rounded-start" placeholder="Type your message..." required />
+        <button class="btn btn-primary rounded-end" type="submit">Send</button>
+    </form>
+</div>
+<script>
+const chatBox = document.getElementById("chat-box");
+const chatForm = document.getElementById("chat-form");
+const userInput = document.getElementById("user-input");
+const typingIndicator = document.getElementById("typing-indicator");
+const themeIcon = document.getElementById("theme-icon");
+
+const emotionIcons = {
+    sad: "😢", happy: "😄", stressed: "😰", anxious: "😟", angry: "😡", lonely: "🥺", bored: "😴",
+    grateful: "🙏", excited: "🤩", tired: "😴", unmotivated: "😶", focused: "🧘", frustrated: "😤",
+    unheard: "👂", neutral: "🙂", confused: "🤔", overwhelmed: "😩", hopeless: "😞", worried: "😟",
+    energetic: "⚡", creative: "🎨", unwell: "🤒", pain: "🤕", nervous: "😬", insecure: "😳",
+    proud: "🏅", embarrassed: "😳", nostalgic: "🕰️", motivated: "🚀", inspired: "🌟",
+    jealous: "😒", rejected: "😔", "burnt out": "🔥", peaceful: "🕊️", content: "😊", surprised: "😮", curious: "🧐"
+};
+const userAvatar = "🧑";
+const botAvatar = "🤖";
+
+function scrollToBottom() {
+    chatBox.scrollTo({ top: chatBox.scrollHeight, behavior: 'smooth' });
+}
+
+function addMessage(sender, text, emotion = null) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "chat-bubble " + (sender === "user" ? "flex-row-reverse" : "");
+    wrapper.innerHTML = `
+        <div class="avatar ${sender}" title="${sender === 'user' ? 'You' : 'Bot'}">
+            ${sender === "user" ? userAvatar : botAvatar}
+        </div>
+        <div class="bubble ${sender}">
+            <span>${text}</span>
+            
+        </div>
+    `;
+    chatBox.appendChild(wrapper);
+    scrollToBottom();
+}
+
+function showQuickReplies(options) {
+    removeQuickReplies();
+    const container = document.createElement("div");
+    container.className = "quick-replies";
+    container.id = "quick-replies";
+    options.forEach(opt => {
+        const btn = document.createElement("button");
+        btn.className = "quick-reply-btn";
+        btn.innerText = opt;
+        btn.onclick = (e) => {
+            e.preventDefault();
+            userInput.value = opt;
+            chatForm.dispatchEvent(new Event('submit'));
+            removeQuickReplies();
+        };
+        container.appendChild(btn);
+    });
+    chatBox.appendChild(container);
+    scrollToBottom();
+}
+
+function suggestStartupOptions() {
+    showQuickReplies([
+        "breathing exercise", "creative prompt", "mood journaling", "mini workout", "gratitude practice", "music suggestion",
+        "fact", "quote", "definition"
+    ]);
+}
+
+function removeQuickReplies() {
+    const qr = document.getElementById("quick-replies");
+    if (qr) qr.remove();
+}
+
+function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+    themeIcon.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌗";
+    localStorage.setItem("chatbot-theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+}
+
+function setThemeOnLoad() {
+    const mode = localStorage.getItem("chatbot-theme");
+    if (mode === "dark") {
+        document.body.classList.add("dark-mode");
+        themeIcon.textContent = "☀️";
+    }
+}
+
+chatForm.onsubmit = async e => {
+    e.preventDefault();
+    const text = userInput.value;
+    addMessage("user", text);
+    userInput.value = "";
+    removeQuickReplies();
+    typingIndicator.style.display = "block";
+    scrollToBottom();
+    const res = await fetch("/chat", {
+        method: "POST",
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ message: text })
+    });
+    const data = await res.json();
+    typingIndicator.style.display = "none";
+    addMessage("bot", data.response, data.emotion);
+    if (data.followups && data.followups.length) {
+        showQuickReplies(data.followups);
+    }
+};
+
+window.onload = () => {
+    setThemeOnLoad();
+    suggestStartupOptions();
+}
+</script>
+</body>
+</html>
