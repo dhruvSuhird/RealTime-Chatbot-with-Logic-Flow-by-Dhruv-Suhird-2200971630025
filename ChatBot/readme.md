@@ -1,33 +1,53 @@
 # RealTime Chatbot with Logic Flow
 
-A real-time chatbot web application built using Flask (Python), HTML, and CSS that supports:
-- Emotion-aware conversation flow
-- Activity suggestions (breathing exercise, creative prompt, mood journaling, mini workout, gratitude practice, music suggestion)
-- Knowledge base queries (fact, quote, definition)
-- Custom logic flow via a JSON-driven dialog engine
+A real-time, emotion-aware chatbot web application built using Flask (Python), HTML, and CSS. The chatbot uses a logic flow powered by a JSON configuration to provide empathetic responses, suggest activities, and answer knowledge-based queries in real time.
+
+---
 
 ## Features
 
-- **Real-time Chat Interface:** Send and receive messages instantly with a modern, responsive UI.
-- **Emotion Recognition:** The bot responds empathetically to user emotions and triggers appropriate follow-ups.
-- **Activities and Suggestions:** Offers a variety of activities for mental well-being and productivity.
-- **Knowledge Base:** Provides fun facts, quotes, and definitions upon request.
+- **Emotion Recognition:** Responds empathetically to user emotions and triggers appropriate follow-ups.
+- **Activity Suggestions:** Offers well-being activities like breathing exercises, creative prompts, gratitude practice, and more.
+- **Knowledge Base:** Shares facts, quotes, and definitions upon request.
 - **Customizable Logic Flow:** Easily update triggers, follow-ups, and activities in `dialog_flow.json`.
+- **Real-time Chat Interface:** Modern, responsive UI.
 
-## Technologies Used
+---
 
-- **Backend:** Python (Flask)
-- **Frontend:** HTML, CSS, Bootstrap, JavaScript (vanilla)
-- **Logic Engine:** JSON-based dialog flow
+## Dataset Used
+
+- The chatbot's knowledge base, dialog triggers, and response flows are defined in [`dialog_flow.json`](dialog_flow.json).
+    - **Dialog triggers:** Map user phrases to emotional states and responses.
+    - **Activities:** List of well-being and productivity activities.
+    - **Knowledge base:** Includes facts, quotes, and definitions for quick retrieval.
+
+This dataset is hand-crafted for demo and educational purposes and can be extended for richer conversations.
+
+---
+
+## Approach Summary
+
+- **Logic Flow:** The chatbot does not use machine learning; instead, it maps user input to triggers, follow-ups, and knowledge using pattern matching and keywords defined in a JSON file.
+- **Flexible Parsing:** The backend parses user commands for activity/knowledge requests (e.g., "give me a quote", "definition of stress") and intelligently matches them to the appropriate response.
+- **Emotion Icons:** Each response is associated with an emotion, displayed as an emoji in the chat UI.
+- **Frontend-Backend Communication:** Uses AJAX (fetch) for real-time, seamless chat experience.
+
+---
+
+## Dependencies
+
+- **Python >= 3.7**
+- **Flask**
+- (Frontend) **Bootstrap 5** (via CDN)
+
+### Install dependencies:
+```bash
+pip install flask
+```
+
+---
 
 ## Getting Started
-
-### Prerequisites
-
-- Python 3.x
-- Flask (`pip install flask`)
-
-### Installation
 
 1. **Clone the repository:**
     ```bash
@@ -35,19 +55,16 @@ A real-time chatbot web application built using Flask (Python), HTML, and CSS th
     cd RealTime-Chatbot-with-Logic-Flow-by-Dhruv-Suhird-2200971630025
     ```
 
-2. **Install dependencies:**
-    ```bash
-    pip install flask
-    ```
-
-3. **Run the application:**
+2. **Run the application:**
     ```bash
     python app.py
     ```
-    The app will run on `http://127.0.0.1:5000/`
+    The app will run at [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 
-4. **Open in your browser:**
+3. **Open in your browser:**
     - Go to [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+
+---
 
 ## File Structure
 
@@ -62,23 +79,17 @@ A real-time chatbot web application built using Flask (Python), HTML, and CSS th
 └── README.md
 ```
 
-## Customizing the Chatbot
-
-- **Modify logic or add activities:**  
-  Edit `dialog_flow.json` to add new triggers, responses, activities, or knowledge entries.
-
-- **Change the UI:**  
-  Edit `templates/index.html` and `static/style.css` for look & feel.
+---
 
 ## Example Activities & Queries
 
-- "breathing exercise"
-- "give me a quote"
-- "tell me a fact"
-- "definition of stress"
-- "I'm feeling sad"
-- "surprise me"
-- "mini workout"
+- `breathing exercise`
+- `give me a quote`
+- `tell me a fact`
+- `definition of stress`
+- `I'm feeling sad`
+- `surprise me`
+- `mini workout`
 
 ---
 
